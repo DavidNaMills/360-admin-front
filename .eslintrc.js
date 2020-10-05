@@ -12,7 +12,6 @@ module.exports = {
     "plugin:jest/all",
     "plugin:prettier/recommended",
     "plugin:jsdoc/recommended",
-    "plugin:@typescript-eslint/recommended",
     "prettier",
   ],
   globals: {
@@ -37,10 +36,7 @@ module.exports = {
       },
     ],
     quotes: ["error", "double"],
-    "react/jsx-filename-extension": [
-      1,
-      { extensions: [".js", ".jsx", ".ts", ".tsx"] },
-    ],
+    "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
     "import/extensions": "off",
     "no-console": ["error", { allow: ["log", "error"] }],
     "linebreak-style": ["error", "windows"],

@@ -2,7 +2,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 
 module.exports = {
-  stories: ["../src/**/*.stories.tsx"],
+  stories: ["../src/**/*.stories.js"],
   addons: ["@storybook/addon-actions", "@storybook/addon-links"],
   webpackFinal: async (config) => {
     config.module.rules.push(
@@ -32,7 +32,7 @@ module.exports = {
     );
 
     config.plugins.push(new MiniCssExtractPlugin({ filename: "[name].css" }));
-    config.resolve.extensions.push(".ts", ".tsx", ".css", ".scss");
+    config.resolve.extensions.push(".js", ".css", ".scss");
     return config;
   },
 };
